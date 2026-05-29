@@ -15,8 +15,6 @@ def about():
 
 #Users Route
 
-@app.get("/users")
-def users():
-    return {
-        "users": ["Ravi", "Suresh", "Kumar"]
-        }
+@app.get("/users/{user_id}")
+def get_users(user_id:str):
+    return {"user_id": user_id}
